@@ -1,0 +1,10 @@
+{
+  "files.associations": {
+    "string": "c",
+    "iosfwd": "c",
+    "ios": "c",
+    "연결리스트_12303_기초연결리스트": "c",
+    "iostream": "cpp",
+    "queue": "cpp"
+  }
+}
