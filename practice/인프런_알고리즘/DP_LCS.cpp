@@ -5,6 +5,7 @@ using namespace std;
 
 char s1[1001];
 char s2[1001];
+
 int len1;
 int len2;
 

@@ -1,7 +1,6 @@
 #include <iostream>
 #include <algorithm>
 using namespace std;
-
 /*
 #define X -1
 
