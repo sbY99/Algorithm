@@ -8,7 +8,6 @@ int dp[510][510];
 
 int dfs(int cx, int cy)
 {
-
     if (dp[cx][cy])
         return dp[cx][cy];
 

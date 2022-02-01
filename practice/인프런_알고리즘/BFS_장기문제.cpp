@@ -23,7 +23,6 @@ int main()
     scanf("%d%d", &fx, &fy);
 
     q.push({sx, sy});
-
     while (q.size() > 0)
     {
 
