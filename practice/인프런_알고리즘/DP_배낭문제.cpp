@@ -4,7 +4,6 @@
 using namespace std;
 
 int N, K;
-
 int Weight[1001];
 int Price[1001];
 
