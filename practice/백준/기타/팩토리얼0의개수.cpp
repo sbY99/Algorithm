@@ -3,6 +3,7 @@
 using namespace std;
 
 int Count;
+int test;
 
 int main()
 {
