@@ -25,6 +25,8 @@ int main()
         name[i] = s;
 
         //pair 객체를 생성하여 insert해줌
+        //m[s]=i도 가능
+        //m.insert({s,i})도 가능
         m.insert(make_pair(s, i));
     }
 
