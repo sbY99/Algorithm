@@ -17,6 +17,7 @@ int grid[310][310];
 
 int main()
 {
+
     scanf("%d%d", &n, &m);
     scanf("%d%d", &sx, &sy);
     scanf("%d%d", &fx, &fy);
