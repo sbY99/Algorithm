@@ -132,7 +132,7 @@ int getChild(User *temp_user, int parent)
 
     else
     {
-        if (user[left].id < user[right].id)
+        if (temp_user[left].id < temp_user[right].id)
             return left;
         return right;
     }
