@@ -24,7 +24,7 @@ void divide(int start_x, int end_x, int start_y, int end_y)
                     corrected = false;
                     break;
                 }
-                temp = (1 << 2);
+                temp = 1 << 2;
             }
             else if (grid[i][j] == 0)
             {
@@ -33,7 +33,7 @@ void divide(int start_x, int end_x, int start_y, int end_y)
                     corrected = false;
                     break;
                 }
-                temp = (1 << 1);
+                temp = 1 << 1;
             }
             else
             {
@@ -56,17 +56,17 @@ void divide(int start_x, int end_x, int start_y, int end_y)
         //-1
         if (temp == 4)
         {
-            r1++;
+            r1 += (end_x - start_x + 1) * (end_x - start_x + 1);
         }
         //0
         else if (temp == 2)
         {
-            r2++;
+            r2 += (end_x - start_x + 1) * (end_x - start_x + 1);
         }
         //1
         else
         {
-            r3++;
+            r3 += (end_x - start_x + 1) * (end_x - start_x + 1);
         }
     }
     else
@@ -75,15 +75,15 @@ void divide(int start_x, int end_x, int start_y, int end_y)
         int diff = (end_x - start_x + 1) / 3 - 1;
 
         divide(start_x, start_x + diff, start_y, start_y + diff);
-        divide(start_x, start_x + diff, start_y + diff + 1, start_y + 2 * diff + 1);
+        divide(start_x, start_x + diff, start_y + diff + 1, start_y + diff + 2 * diff + 1);
         divide(start_x, start_x + diff, start_y + 2 * diff + 2, end_y);
 
         divide(start_x + diff + 1, start_x + diff * 2 + 1, start_y, start_y + diff);
-        divide(start_x + diff + 1, start_x + diff * 2 + 1, start_y + diff + 1, start_y + 2 * diff + 1);
+        divide(start_x + diff + 1, start_x + diff * 2 + 1, start_y + diff + 1, start_y + diff + 2 * diff + 1);
         divide(start_x + diff + 1, start_x + diff * 2 + 1, start_y + 2 * diff + 2, end_y);
 
         divide(start_x + diff * 2 + 2, end_x, start_y, start_y + diff);
-        divide(start_x + diff * 2 + 2, end_x, start_y + diff + 1, start_y + 2 * diff + 1);
+        divide(start_x + diff * 2 + 2, end_x, start_y + diff + 1, start_y + diff + 2 * diff + 1);
         divide(start_x + diff * 2 + 2, end_x, start_y + 2 * diff + 2, end_y);
     }
 }
@@ -99,5 +99,5 @@ int main()
         }
     }
     divide(1, N, 1, N);
-    printf("%d\n%d\n%d", r1, r2, r3);
+    printf("%d\n %d\n %d", r1, r2, r3);
 }
