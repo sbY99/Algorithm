@@ -14,15 +14,15 @@ void findString(string parent, string pattern)
         {
             for (int j = 0; j < patternSize; j++)
             {
+                //가장 큰 power을 저장하기 위함
+                //만약 조건문 없애면, 가장 크게 곱한 power*2가 된 채로 반복문 종료됨
+                if (j != 0)
+                    power *= 2;
+
                 //패턴 사이즈에 맞게 맨 마지막 문자부터 차례로 곱해가며
                 //초기 해쉬 값 생성
                 parentHash += parent[patternSize - 1 - j] * power;
                 patternHash += pattern[patternSize - 1 - j] * power;
-
-                //가장 큰 power을 저장하기 위함
-                //만약 조건문 없애면, 가장 크게 곱한 power*2가 된 채로 반복문 종료됨
-                if (j < patternSize - 1)
-                    power *= 2;
             }
         }
         else
