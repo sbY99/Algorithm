@@ -6,6 +6,8 @@
     "iostream": "cpp",
     "set": "cpp",
     "ios": "cpp",
-    "queue": "cpp"
+    "queue": "cpp",
+    "algorithm": "cpp",
+    "functional": "cpp"
   }
 }
