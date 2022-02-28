@@ -1,2 +1,1 @@
-
-    return 0;
+        printf("%d %d\n", Alpha[i].firstPriority,

@@ -8,6 +8,8 @@
     "ios": "cpp",
     "queue": "cpp",
     "algorithm": "cpp",
-    "functional": "cpp"
+    "functional": "cpp",
+    "chrono": "cpp",
+    "limits": "cpp"
   }
 }
