@@ -35,6 +35,5 @@ int main()
         init();
         input();
     }
-
     return 0;
 }
