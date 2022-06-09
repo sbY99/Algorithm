@@ -24,6 +24,5 @@ int main()
     {
         printf("%d ", lower_bound(Count.begin(), Count.end(), Input[i]) - Count.begin());
     }
-
     return 0;
 }
