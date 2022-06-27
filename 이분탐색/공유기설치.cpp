@@ -29,6 +29,7 @@ void input()
 
 bool isPossible(int num)
 {
+    // 간격은 C-1개 이므로 1부터
     int cnt = 1;
     int prev = arr[0];
 
