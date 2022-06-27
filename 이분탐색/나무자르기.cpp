@@ -7,6 +7,8 @@ long long trees[1000001];
 
 void init();
 void input();
+bool isPossible(unsigned int height);
+void solve();
 
 void init()
 {
@@ -33,7 +35,7 @@ bool isPossible(unsigned int height)
     }
     return false;
 }
-int solve()
+void solve()
 {
     unsigned int left = 0, right = 1000000000;
     unsigned int mid, result;
