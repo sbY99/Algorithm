@@ -4,6 +4,23 @@ using namespace std;
 int N;
 long long M;
 long long trees[1000001];
+
+void init();
+void input();
+
+void init()
+{
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
+}
+
+void input()
+{
+    cin >> N >> M;
+    for (int i = 0; i < N; i++)
+        cin >> trees[i];
+}
+
 bool isPossible(unsigned int height)
 {
     unsigned int taken = 0;
@@ -19,13 +36,13 @@ bool isPossible(unsigned int height)
 int solve()
 {
     unsigned int left = 0, right = 1000000000;
-    unsigned int mid, ret;
+    unsigned int mid, result;
     while (left <= right)
     {
         mid = (left + right) / 2;
         if (isPossible(mid))
         {
-            ret = mid;
+            result = mid;
             left = mid + 1;
         }
         else
@@ -33,13 +50,11 @@ int solve()
             right = mid - 1;
         }
     }
-    return ret;
+    cout << result;
 }
 int main()
 {
-    cin >> N >> M;
-    for (int i = 0; i < N; i++)
-        cin >> trees[i];
-
-    cout << solve() << endl;
+    init();
+    input();
+    solve();
 }

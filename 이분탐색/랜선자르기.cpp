@@ -8,6 +8,25 @@ typedef long long ll;
 ll K, N;
 ll arr[10001];
 
+void init();
+void input();
+bool isPossible(ll n);
+
+void init()
+{
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
+}
+
+void input()
+{
+    cin >> K >> N;
+    for (ll i = 0; i < K; i++)
+    {
+        cin >> arr[i];
+    }
+}
+
 bool isPossible(ll n)
 {
     ll part_sum = 0;
@@ -43,20 +62,13 @@ void solve()
             right = mid - 1;
         }
     }
-
     cout << right;
 }
 
 int main()
 {
-    ios::sync_with_stdio(false);
-    cin.tie(NULL);
-
-    cin >> K >> N;
-    for (ll i = 0; i < K; i++)
-    {
-        cin >> arr[i];
-    }
+    init();
+    input();
     solve();
 
     return 0;

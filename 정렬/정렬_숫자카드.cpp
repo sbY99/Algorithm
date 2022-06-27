@@ -4,12 +4,36 @@
 #include <time.h>
 
 using namespace std;
+
+int arr1[500001];
+int arr2[500001];
+int arr3[500001];
+
+void input();
 void swap(int *arr, int i, int j);
 void quicksort(int *arr, int low, int high);
 int partition(int *arr, int low, int high);
 void solve(int *arr1, int *arr2);
 int N, M;
 map<int, int> result;
+
+void input()
+{
+    cin >> N;
+
+    for (int i = 0; i < N; i++)
+    {
+        cin >> arr1[i];
+    }
+
+    cin >> M;
+
+    for (int i = 0; i < M; i++)
+    {
+        cin >> arr2[i];
+        arr3[i] = arr2[i];
+    }
+}
 
 void swap(int *arr, int i, int j)
 {
@@ -75,25 +99,9 @@ void solve(int *arr1, int *arr2)
 
 int main()
 {
+    input();
     srand(time(NULL));
-    int arr1[500001];
-    int arr2[500001];
-    int arr3[500001];
 
-    cin >> N;
-
-    for (int i = 0; i < N; i++)
-    {
-        cin >> arr1[i];
-    }
-
-    cin >> M;
-
-    for (int i = 0; i < M; i++)
-    {
-        cin >> arr2[i];
-        arr3[i] = arr2[i];
-    }
     quicksort(arr1, 0, N - 1);
     quicksort(arr2, 0, M - 1);
     solve(arr1, arr2);
