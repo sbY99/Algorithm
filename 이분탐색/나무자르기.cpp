@@ -1,13 +1,15 @@
 #include <iostream>
 
 using namespace std;
+typedef long long ll;
+
 int N;
-long long M;
-long long trees[1000001];
+ll M;
+ll trees[1000001];
 
 void init();
 void input();
-bool isPossible(unsigned int height);
+bool isPossible(ll height);
 void solve();
 
 void init()
@@ -23,9 +25,9 @@ void input()
         cin >> trees[i];
 }
 
-bool isPossible(unsigned int height)
+bool isPossible(ll height)
 {
-    unsigned int taken = 0;
+    ll taken = 0;
     for (int i = 0; i < N; i++)
     {
         if (trees[i] >= height)
@@ -35,10 +37,11 @@ bool isPossible(unsigned int height)
     }
     return false;
 }
+
 void solve()
 {
-    unsigned int left = 0, right = 1000000000;
-    unsigned int mid, result;
+    ll left = 0, right = 1000000000;
+    ll mid, result;
     while (left <= right)
     {
         mid = (left + right) / 2;
@@ -48,9 +51,7 @@ void solve()
             left = mid + 1;
         }
         else
-        {
             right = mid - 1;
-        }
     }
     cout << result;
 }

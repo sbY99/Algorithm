@@ -40,10 +40,10 @@ bool isPossible(int num)
             cnt++;
             prev = arr[i];
         }
-    }
 
-    if (cnt >= C)
-        return true;
+        if (cnt >= C)
+            return true;
+    }
     return false;
 }
 
