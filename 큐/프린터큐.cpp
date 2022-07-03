@@ -10,6 +10,7 @@ int importance[10];
 
 void init();
 void input();
+void test_init();
 void solve();
 
 void init()
@@ -24,14 +25,18 @@ void input()
     cin >> T;
 }
 
+void test_init()
+{
+    memset(importance, 0, sizeof(importance));
+    cin >> N >> target;
+}
+
 void solve()
 {
     for (int i = 0; i < T; i++)
     {
-        memset(importance, 0, sizeof(importance));
-
+        test_init();
         int cnt = 0;
-        cin >> N >> target;
         queue<pair<int, int>> q;
 
         for (int j = 0; j < N; j++)
@@ -70,10 +75,8 @@ void solve()
                     break;
                 }
                 else
-                {
                     q.pop();
-                }
-            }
+                        }
             else
             {
                 pair<int, int> p = q.front();
