@@ -69,6 +69,8 @@
     "unordered_map": "cpp",
     "variant": "cpp",
     "__functional_base": "cpp",
-    "iterator": "cpp"
+    "iterator": "cpp",
+    "numeric": "cpp",
+    "random": "cpp"
   }
 }

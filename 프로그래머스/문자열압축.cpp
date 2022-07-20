@@ -13,7 +13,7 @@ int solution(string s)
 
     for (int i = 1; i <= range; i++)
     {
-        int part_result = 0, part_length = 1;
+        int part_result = 0, part_length = 0;
         int start = 0, end = i;
 
         string prev;
@@ -24,6 +24,7 @@ int solution(string s)
         }
         start += i;
         end = start + i;
+        part_length++;
 
         while (end <= range)
         {
@@ -51,10 +52,10 @@ int solution(string s)
                 part_length = 1;
                 prev = curr;
             }
-
             start += i;
             end = start + i;
         }
+
         part_result += i;
         if (part_length >= 2)
             part_result++;

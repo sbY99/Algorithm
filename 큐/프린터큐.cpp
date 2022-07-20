@@ -76,7 +76,7 @@ void solve()
                 }
                 else
                     q.pop();
-                        }
+            }
             else
             {
                 pair<int, int> p = q.front();

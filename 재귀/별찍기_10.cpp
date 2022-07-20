@@ -14,12 +14,13 @@ void input()
 
 void rec(int i, int j, int num)
 {
-    if ((i / num) % 3 == 1 && (j / num) % 3 == 1)
+    if ((i / (num / 3)) % 3 == 1 && (j / (num / 3)) % 3 == 1)
     {
         cout << ' ';
     }
     else
     {
+        // num < 3
         if (num / 3 == 0)
             cout << '*';
         else
