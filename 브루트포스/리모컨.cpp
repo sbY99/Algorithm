@@ -13,6 +13,7 @@ int GetSize(int num)
         num /= 10;
         ++len;
     }
+
     return len;
 }
 
